@@ -1,0 +1,14 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.centered-image {
+  width: 1225px;
+  height: 800px;
+  object-fit: cover;
+  align-items: center;
+}

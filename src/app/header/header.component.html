@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink=""> Tutor Service</a>
+
+    <!-- docenten -->
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <div class="valign-center">
+            <span class="material-symbols-outlined"> groups </span>
+            <a class="nav-link" routerLink="/docenten"> Docenten </a>
+          </div>
+        </li>
+
+        <!-- niveaus -->
+        <li class="nav-item dropdown">
+          <div class="valign-center">
+            <span class="material-symbols-outlined" routerLink="/niveaus">
+              school
+            </span>
+            <a
+              [matMenuTriggerFor]="niveaus"
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+            >
+              Niveaus
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <!-- logo -->
+      <div class="col-1 mx-auto">
+        <h1>HH</h1>
+      </div>
+
+      <!-- account -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <div class="valign-center">
+            <a
+              [matMenuTriggerFor]="account"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              routerLink="/register"
+            >
+              <span class="material-symbols-outlined"> account_circle </span>
+              Mijn Account</a
+            >
+          </div>
+        </li>
+      </ul>
+
+      <mat-menu #niveaus="matMenu">
+        <button mat-menu-item routerLink="/glo">GLO</button>
+        <button mat-menu-item routerLink="/voj">VOJ</button>
+        <button mat-menu-item routerLink="/vos">VOS</button>
+      </mat-menu>
+
+      <mat-menu #account="matMenu">
+        <button mat-menu-item>Bekijk profiel</button>
+        <button mat-menu-item>Bekijk komende lessen</button>
+        <button mat-menu-item>Bewerken</button>
+      </mat-menu>
+    </div>
+  </div>
+</nav>
