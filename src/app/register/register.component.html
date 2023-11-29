@@ -1,3 +1,4 @@
+<h1 class="text-center">Registreren</h1>
 <div class="form-container">
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div>
@@ -10,8 +11,7 @@
           (registerForm.get('voornaam').dirty ||
             registerForm.get('voornaam').touched)
         "
-        class="text-danger"
-      >
+        class="text-danger">
         Vul in
       </div>
     </div>
@@ -90,22 +90,22 @@
         <label class="form-check-label" for="{{ day }}">{{ day }}</label>
       </div>
     </div>
-      <div
-        *ngIf="
-          registerForm.get('selectedDays').invalid &&
-          (registerForm.get('selectedDays').dirty ||
-            registerForm.get('selectedDays').touched)
-        "
-        class="text-danger"
-      >
-        Kies een dag
-      </div>
+    <div
+      *ngIf="
+        registerForm.get('selectedDays').invalid &&
+        (registerForm.get('selectedDays').dirty ||
+          registerForm.get('selectedDays').touched)
+      "
+      class="text-danger"
+    >
+      Kies een dag
+    </div>
 
     <button
       class="btn btn-dark"
       type="submit"
       [disabled]="registerForm.invalid"
-          [routerLink]="[
+      [routerLink]="[
         '/confirm',
         registerForm.value.voornaam,
         registerForm.value.familienaam,
@@ -114,7 +114,6 @@
         registerForm.value.selectedNiveau,
         registerForm.value.selectedDays.join(',')
       ]"
-  
     >
       Registreren
     </button>

@@ -5,18 +5,18 @@
       <div class="card card_docent">
         <img src="{{ docent.image }}" class="card-img-top" alt="" />
         <div class="card-body">
-      
           <p class="card-text">Naam: {{ docent.name }}</p>
           <p class="card-text">Bijles dagen: {{ docent.days }}</p>
           <p class="card-text">Tarief: SRD {{ docent.rate }},- per uur</p>
           <button
-          type="button"
-          class="btn btn-dark"
-          routerLink="/register"
-          (click)="joinTutor(docent.name)"
-        >
-          Sluit je aan!
-        </button>  </div>
+            type="button"
+            class="btn btn-warning"
+            routerLink="/register"
+            (click)="joinTutor(docent.name)"
+          >
+            Sluit je aan!
+          </button>
+        </div>
       </div>
     </div>
   </div>

@@ -1,10 +1,23 @@
-.card {
-    margin-bottom: 20px; /* Add some bottom margin for spacing between cards */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Lobster+Two&family=Tangerine:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=IBM+Plex+Serif:wght@500&family=Lobster+Two&family=Tangerine:wght@700&display=swap');
 
-  }
-  
-  /* Optionally, you can also style the button for consistent spacing */
-  .card-body button {
-    margin-left: 70%;
-  }
-  
+h1{
+  padding-top: 10px;
+font-family: 'Cardo', serif;
+}
+.card {
+  margin-bottom: 20px;
+}
+
+.card-body button {
+  margin-left: 70%;
+}
+
+button {
+  padding: 10px;
+  color: white;
+  background-color: #151515;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

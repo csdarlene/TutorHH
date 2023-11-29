@@ -1,4 +1,3 @@
-import { NiveausComponent } from './../../niveaus/niveaus.component';
 import { Component, Input, OnInit } from '@angular/core';
 import { StudentInfo } from '../studentInfo.model';
 import { ActivatedRoute } from '@angular/router';
@@ -29,10 +28,14 @@ export class ConfirmComponent implements OnInit {
     this.voorNaam = this.route.snapshot.paramMap.get('voornaam');
 
     this.familieNaam = this.route.snapshot.paramMap.get('familienaam');
+
     this.tutor = this.route.snapshot.paramMap.get('tutor');
+
     const leerJaarNum = this.route.snapshot.paramMap.get('leerjaar');
     this.leerJaar = parseInt(leerJaarNum);
+
     this.niveau = this.route.snapshot.paramMap.get('niveau');
+    
     this.dag = this.route.snapshot.paramMap.get('dag');
 
     this.studentObject = this.studenten.find(
@@ -45,8 +48,6 @@ export class ConfirmComponent implements OnInit {
         student.days == this.dag
     );
 
-    // this.registerUitgave.value.maandObject1 = this.maanden.find(maand => maand.maand == this.maandString);
     console.log(this.studentObject);
-
   }
 }

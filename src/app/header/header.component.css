@@ -18,3 +18,16 @@ h1 {
   display: inline-flex;
   align-items: center;
 }
+.navbar{
+background-color: black;
+}
+a{
+  color: white;
+}
+.navbar-nav .nav-item:hover .nav-link, .navbar-brand:hover {
+  color: #ffb000;}
+
+  .nav-link:enabled{
+    color: #ffb000;
+
+  }

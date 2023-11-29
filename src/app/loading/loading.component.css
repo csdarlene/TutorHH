@@ -5,29 +5,19 @@ h1{
   padding-top: 10px;
 font-family: 'Cardo', serif;
 }
-.confirmation-card {
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.confirmation-hr {
-  border-top: 1px solid #ccc;
+.confirmation-logo {
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .confirmation-btn {
+  align-items: center;
   margin-top: 10px;
   padding: 10px;
   background-color: #ffb000;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-.valign-center {
-  color: #000000;
-
-  display: inline-flex;
-  align-items: center;
-}
-.foot_buttom {
-  padding-bottom: 215px;
 }

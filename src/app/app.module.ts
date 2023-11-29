@@ -19,6 +19,7 @@ import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TutorService } from './shared/tutor.service';
 import { ConfirmComponent } from './register/confirm/confirm.component';
+import { LoadingComponent } from './loading/loading.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,10 +30,11 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'confirm', component: ConfirmComponent },
   { path: 'docenten', component: DocentenComponent },
+  { path: 'loading', component: LoadingComponent },
   {
     path: 'confirm/:voornaam/:familienaam/:tutor/:leerjaar/:niveau/:dag',
     component: ConfirmComponent,
-  },
+  }
 ];
 
 @NgModule({
@@ -48,6 +50,7 @@ const appRoutes: Routes = [
     DocentenComponent,
     RegisterComponent,
     ConfirmComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,

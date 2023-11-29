@@ -15,7 +15,7 @@ export class TutorService {
     return this.selectedTutor;
   }
 
-  registerStudent: StudentInfo[]=[];
+  registerStudent: StudentInfo[] = [];
 
   addStudent(student: StudentInfo) {
     this.registerStudent.push(student);

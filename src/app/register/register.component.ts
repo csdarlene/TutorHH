@@ -9,7 +9,7 @@ import { StudentInfo } from './studentInfo.model';
   styleUrl: './register.component.css',
 })
 export class RegisterComponent implements OnInit {
-  studenten: StudentInfo[] =this.tutorService.registerStudent;
+  studenten: StudentInfo[] = this.tutorService.registerStudent;
 
   registerForm: FormGroup;
 
@@ -28,25 +28,25 @@ export class RegisterComponent implements OnInit {
       tutor: [this.tutorService.getTutorName()],
       leerjaar: [null, Validators.required],
       selectedNiveau: ['', Validators.required],
-      selectedDays: [[], Validators.required]
+      selectedDays: [[], Validators.required],
     });
- 
-}
-
-onCheckboxChange(day: string) {
-  const selectedDays = this.registerForm.get('selectedDays').value as string[];
-
-  if (selectedDays.includes(day)) {
-    // Remove the day if it's already selected
-    selectedDays.splice(selectedDays.indexOf(day), 1);
-  } else {
-    // Add the day if it's not selected
-    selectedDays.push(day);
   }
 
-  // Update the form control value
-  this.registerForm.get('selectedDays').setValue(selectedDays);
-}
+  onCheckboxChange(day: string) {
+    const selectedDays = this.registerForm.get('selectedDays')
+      .value as string[];
+
+    if (selectedDays.includes(day)) {
+      // Remove the day if it's already selected
+      selectedDays.splice(selectedDays.indexOf(day), 1);
+    } else {
+      // Add the day if it's not selected
+      selectedDays.push(day);
+    }
+
+    // Update the form control value
+    this.registerForm.get('selectedDays').setValue(selectedDays);
+  }
 
   onSubmit() {
     const newStudent = new StudentInfo(
@@ -59,8 +59,7 @@ onCheckboxChange(day: string) {
     );
 
     this.studenten.push(newStudent);
-    console.log(this.registerForm.value)
-    console.log(this.studenten)
-
+    console.log(this.registerForm.value);
+    console.log(this.studenten);
   }
 }

@@ -1,12 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+
+body {  padding-bottom: 20px;
+  font-family: 'Tangerine', cursive;
+}
 
 .valign-center {
-    align-items: center;
-  }
+  align-items: center;
+}
 
-  h1,h2,h3,a,p {
-    font-family: "IBM Plex Serif", serif;}

@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Lobster+Two&family=Tangerine:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=IBM+Plex+Serif:wght@500&family=Lobster+Two&family=Tangerine:wght@700&display=swap');
+
+h1{
+  padding-top: 10px;
+font-family: 'Cardo', serif;
+}
 .form-container {
-  margin: 100px;
+  margin: 25px;
   height: 650px;
 }
 
@@ -10,7 +17,6 @@ form {
   box-shadow: 0 0 10px #3c3c3b;
 }
 
-
 label {
   display: block;
   margin-bottom: 8px;
@@ -18,16 +24,15 @@ label {
 }
 
 input,
-select{
+select {
   width: 100%;
   padding: 8px;
   margin-bottom: 16px;
-  border: 1px solid #ffb000; 
+  border: 1px solid #ffb000;
   border-radius: 4px;
-  background-color: #fff; 
-  color: #000000; 
+  background-color: #fff;
+  color: #000000;
 }
-
 
 button {
   padding: 10px;
@@ -37,7 +42,6 @@ button {
   cursor: pointer;
 }
 
-
 button:hover {
-  background-color: #555; 
+  background-color: #555;
 }

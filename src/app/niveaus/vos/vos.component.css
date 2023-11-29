@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Lobster+Two&family=Tangerine:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=IBM+Plex+Serif:wght@500&family=Lobster+Two&family=Tangerine:wght@700&display=swap');
+
+h1{
+  padding-top: 10px;
+font-family: 'Cardo', serif;
+}
 .text-center h1 {
     color: #000000;
 }
