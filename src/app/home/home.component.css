@@ -6,9 +6,10 @@
   margin: 0;
 }
 
-.centered-image {
-  width: 1225px;
-  height: 800px;
-  object-fit: cover;
-  align-items: center;
-}
+
+  .centered-image {
+    max-width: 96%; 
+    max-height: 100%; 
+  }
+  
+

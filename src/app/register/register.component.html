@@ -1,18 +1,60 @@
 <div class="form-container">
-  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" formControlName="name" />
+      <label for="voornaam">Voornaam:</label>
+      <input type="text" id="voornaam" formControlName="voornaam" />
+
+      <div
+        *ngIf="
+          registerForm.get('voornaam').invalid &&
+          (registerForm.get('voornaam').dirty ||
+            registerForm.get('voornaam').touched)
+        "
+        class="text-danger"
+      >
+        Vul in
+      </div>
     </div>
 
     <div>
+      <label for="familienaam">Familienaam:</label>
+      <input type="text" id="familienaam" formControlName="familienaam" />
+
+      <div
+        *ngIf="
+          registerForm.get('familienaam').invalid &&
+          (registerForm.get('familienaam').dirty ||
+            registerForm.get('familienaam').touched)
+        "
+        class="text-danger"
+      >
+        Vul in
+      </div>
+    </div>
+    <div>
       <label for="tutor">Tutor:</label>
-      <input type="text" id="tutor" formControlName="tutor" />
+      <input type="text" id="tutor" formControlName="tutor" readonly />
     </div>
 
     <div>
       <label for="leerjaar">Leerjaar:</label>
-      <input type="number" id="leerjaar" formControlName="leerjaar" />
+      <input
+        type="number"
+        id="leerjaar"
+        formControlName="leerjaar"
+        min="1"
+        max="15"
+      />
+      <div
+        *ngIf="
+          registerForm.get('leerjaar').invalid &&
+          (registerForm.get('leerjaar').dirty ||
+            registerForm.get('leerjaar').touched)
+        "
+        class="text-danger"
+      >
+        Voer een leerjaar in
+      </div>
     </div>
 
     <div>
@@ -22,16 +64,59 @@
           {{ niveau }}
         </option>
       </select>
+      <div
+        *ngIf="
+          registerForm.get('selectedNiveau').invalid &&
+          (registerForm.get('selectedNiveau').dirty ||
+            registerForm.get('selectedNiveau').touched)
+        "
+        class="text-danger"
+      >
+        Kies een niveau
+      </div>
     </div>
-  
+
     <div>
-        <label for="selectedDays">Kies Dag:</label> 
-        <div class="form-check form-check-inline" *ngFor="let day of days">
-          <input type="checkbox" id="{{ day }}" [value]="day" formControlName="selectedDays" class="form-check-input">
-          <label class="form-check-label" for="{{ day }}">{{ day }}</label>
-        </div></div>
-    
-      
-    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+      <label for="selectedDays">Kies Dag:</label>
+      <div class="form-check form-check-inline" *ngFor="let day of days">
+        <input
+          type="checkbox"
+          id="{{ day }}"
+          [value]="day"
+          [checked]="registerForm.get('selectedDays').value.includes(day)"
+          (change)="onCheckboxChange(day)"
+          class="form-check-input"
+        />
+        <label class="form-check-label" for="{{ day }}">{{ day }}</label>
+      </div>
+    </div>
+      <div
+        *ngIf="
+          registerForm.get('selectedDays').invalid &&
+          (registerForm.get('selectedDays').dirty ||
+            registerForm.get('selectedDays').touched)
+        "
+        class="text-danger"
+      >
+        Kies een dag
+      </div>
+
+    <button
+      class="btn btn-dark"
+      type="submit"
+      [disabled]="registerForm.invalid"
+          [routerLink]="[
+        '/confirm',
+        registerForm.value.voornaam,
+        registerForm.value.familienaam,
+        registerForm.value.tutor,
+        registerForm.value.leerjaar,
+        registerForm.value.selectedNiveau,
+        registerForm.value.selectedDays.join(',')
+      ]"
+  
+    >
+      Registreren
+    </button>
   </form>
 </div>

@@ -1,117 +1,22 @@
 <h1 class="text-center">Docenten</h1>
 <div class="container">
   <div class="row">
-    <div class="col-lg-4 mb-4">
+    <div class="col-lg-4 mb-4" *ngFor="let docent of docenten">
       <div class="card card_docent">
-        <img src="../../assets/images/Janine.jpg" class="card-img-top" alt="" />
+        <img src="{{ docent.image }}" class="card-img-top" alt="" />
         <div class="card-body">
+      
+          <p class="card-text">Naam: {{ docent.name }}</p>
+          <p class="card-text">Bijles dagen: {{ docent.days }}</p>
+          <p class="card-text">Tarief: SRD {{ docent.rate }},- per uur</p>
           <button
-            type="button"
-            class="btn btn-dark"
-            routerLink="/register"
-          >
-            Sluit je aan!
-          </button>
-          <p class="card-text">Naam: Janine</p>
-          <p class="card-text">Bijles dagen: Woensdag</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 mb-4">
-      <div class="card card_docent">
-        <img
-          src="../../assets/images/Barbara.jpg"
-          class="card-img-top"
-          alt=""
-        />
-        <div class="card-body">
-          <button
-            type="button"
-            class="btn btn-dark"
-            routerLink="/register"
-          >
-            Sluit je aan!
-          </button>
-          <p class="card-text">Naam: Barbara</p>
-          <p class="card-text">Bijles dagen: Woensdag</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 mb-4">
-      <div class="card card_docent">
-        <img src="../../assets/images/Ava.jpg" class="card-img-top" alt="" />
-        <div class="card-body">
-          <button
-            type="button"
-            class="btn btn-dark"
-            routerLink="/register"
-          >
-            Sluit je aan!
-          </button>
-          <p class="card-text">Naam: Ava</p>
-          <p class="card-text">Bijles dagen: Woensdag</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 mb-4">
-      <div class="card card_docent">
-        <img
-          src="../../assets/images/Melissa.jpg"
-          class="card-img-top"
-          alt=""
-        />
-        <div class="card-body">
-          <button
-            type="button"
-            class="btn btn-dark"
-            routerLink="/register"
-                     >
-            Sluit je aan!
-          </button>
-          <p class="card-text">Naam: Melissa</p>
-          <p class="card-text">Bijles dagen: Woensdag</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 mb-4">
-      <div class="card card_docent">
-        <img src="../../assets/images/Jacob.jpg" class="card-img-top" alt="" />
-        <div class="card-body">
-          <button
-            type="button"
-            class="btn btn-dark"
-            routerLink="/register"
-          
-          >
-            Sluit je aan!
-          </button>
-          <p class="card-text">Naam: Jacob</p>
-          <p class="card-text">Bijles dagen: Woensdag</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 mb-4">
-      <div class="card card_docent">
-        <img
-          src="../../assets/images/Gregory.jpg"
-          class="card-img-top"
-          alt=""
-        />
-        <div class="card-body">
-          <button
-            type="button"
-            class="btn btn-dark"
-            routerLink="/register"
-          >
-            Sluit je aan!
-          </button>
-          <p class="card-text">Naam: Gregory</p>
-          <p class="card-text">Bijles dagen: Woensdag</p>
-        </div>
+          type="button"
+          class="btn btn-dark"
+          routerLink="/register"
+          (click)="joinTutor(docent.name)"
+        >
+          Sluit je aan!
+        </button>  </div>
       </div>
     </div>
   </div>

@@ -12,20 +12,28 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DocentenComponent } from './docenten/docenten.component';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon'
-import {MatButtonModule} from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TutorService } from './shared/tutor.service';
+import { ConfirmComponent } from './register/confirm/confirm.component';
 
-const appRoutes: Routes = [{ path: '', component: HomeComponent },
-{ path: 'glo', component: GloComponent },
-{ path: 'voj', component: VojComponent },
-{ path: 'vos', component: VosComponent },
-{ path: 'niveaus', component: NiveausComponent },
-{ path: 'register', component: RegisterComponent },
-
-{ path: 'docenten', component: DocentenComponent }];
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'glo', component: GloComponent },
+  { path: 'voj', component: VojComponent },
+  { path: 'vos', component: VosComponent },
+  { path: 'niveaus', component: NiveausComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'confirm', component: ConfirmComponent },
+  { path: 'docenten', component: DocentenComponent },
+  {
+    path: 'confirm/:voornaam/:familienaam/:tutor/:leerjaar/:niveau/:dag',
+    component: ConfirmComponent,
+  },
+];
 
 @NgModule({
   declarations: [
@@ -39,13 +47,18 @@ const appRoutes: Routes = [{ path: '', component: HomeComponent },
     HomeComponent,
     DocentenComponent,
     RegisterComponent,
+    ConfirmComponent,
   ],
   imports: [
-    BrowserModule,MatMenuModule, MatButtonModule,
-    BrowserAnimationsModule,MatIconModule,ReactiveFormsModule,
+    BrowserModule,
+    MatMenuModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [TutorService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

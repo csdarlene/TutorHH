@@ -16,20 +16,12 @@ images:Home[]= [
   new Home('Engels','../../assets/images/Engels.png')
 ]
 
-// nextImage(){ this.index=this.index+1;
-//   if(this.index===3){this.index=0}
-// }
-
-// prevImage(){ this.index=this.index-1;
-//   if(this.index===0){this.index=3}
-// }
-
-prevImage() {
-  this.index = (this.index - 1 + this.images.length) % this.images.length;
+nextImage(){ this.index=this.index+1;
+  if(this.index===3){this.index=0}
 }
 
-nextImage() {
-  this.index = (this.index + 1) % this.images.length;
+prevImage(){ this.index=this.index-1;
+  if(this.index===0){this.index=3}
 }
 
 }

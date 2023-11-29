@@ -1,49 +1,43 @@
 .form-container {
-    margin: 100px;
-  }
-/* Apply the color to the form and its elements */
+  margin: 100px;
+  height: 650px;
+}
+
 form {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #3c3c3b;
+}
 
-    background-color: #000000;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #3c3c3b;
-  }
-  
-  /* Style form labels */
-  label {
-    display: block;
-    margin-bottom: 8px;
-    color: #ffb000; /* You can adjust the label text color */
-  }
-  
-  /* Style form inputs and select */
-  input,
-  select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ffb000; /* You can adjust the input border color */
-    border-radius: 4px;
-    background-color: #fff; /* You can adjust the input background color */
-    color: #333; /* You can adjust the input text color */
-  }
-  
-  /* Style the submit button */
-  button {
-    padding: 10px;
-    background-color: #333; /* You can adjust the button background color */
-    color: #fff; /* You can adjust the button text color */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* Add hover effect to the submit button */
-  button:hover {
-    background-color: #555; /* You can adjust the button background color on hover */
-  }
 
-  
-  
- 
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffb000;
+}
+
+input,
+select{
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ffb000; 
+  border-radius: 4px;
+  background-color: #fff; 
+  color: #000000; 
+}
+
+
+button {
+  padding: 10px;
+  background-color: #ffb000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #555; 
+}

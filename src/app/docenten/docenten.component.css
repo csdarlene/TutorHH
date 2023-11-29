@@ -1,0 +1,10 @@
+.card {
+    margin-bottom: 20px; /* Add some bottom margin for spacing between cards */
+
+  }
+  
+  /* Optionally, you can also style the button for consistent spacing */
+  .card-body button {
+    margin-left: 70%;
+  }
+  
